@@ -12,3 +12,6 @@ main = hspec $
         describe "with all open frames" $
             it "returns the sum" $
                 score (replicate 20 1) `shouldBe` 20
+        describe "with a spare" $
+            it "returns the sum plus spare bonus" $
+                score ([9, 1] ++ replicate 18 1) `shouldBe` 29
