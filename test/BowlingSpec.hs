@@ -15,3 +15,6 @@ main = hspec $
         describe "with a spare" $
             it "returns the sum plus spare bonus" $
                 score ([9, 1] ++ replicate 18 1) `shouldBe` 29
+        describe "with a strike" $
+            it "returns the sum plus strike bonus" $
+                score (10 : replicate 18 1) `shouldBe` 30
