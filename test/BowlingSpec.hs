@@ -18,3 +18,6 @@ main = hspec $
         describe "with a strike" $
             it "returns the sum plus strike bonus" $
                 score (10 : replicate 18 1) `shouldBe` 30
+        describe "with the perfect game" $
+            it "returns 300" $
+                score (replicate 12 10) `shouldBe` 300
